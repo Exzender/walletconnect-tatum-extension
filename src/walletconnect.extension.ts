@@ -1,6 +1,6 @@
 import { BigNumber } from 'bignumber.js'
 import { EvmRpc, TatumConfig, TatumSdkWalletProvider, ITatumSdkContainer, TxPayload,
-     Constant, Utils } from '@tatumio/tatum'
+     Constant, Utils, EVM_BASED_NETWORKS, Network } from '@tatumio/tatum'
 // NOTE: TatumConnector is not exported in @tatumio/tatum - getting it directly
 import { TatumConnector } from '@tatumio/tatum/dist/src/connector/tatum.connector'
 // NOTE: CreateFungibleToken is not exported in @tatumio/tatum - getting it directly
@@ -15,6 +15,7 @@ import { getSdkError } from '@walletconnect/utils'
 import { eipMap } from './walletConnectEip'
 
 export class WalletConnectExtension extends TatumSdkWalletProvider<string, TxPayload> {
+    supportedNetworks: Network[] = EVM_BASED_NETWORKS
     private readonly tatumConfig: TatumConfig
     private readonly rpc: EvmRpc
     private signClient: SignClient

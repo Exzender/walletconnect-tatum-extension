@@ -1,6 +1,6 @@
 {
   "name": "walletconnect-extension",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tatum JS SDK extension - Wallet Connect provider",
   "repository": {
     "type": "git",

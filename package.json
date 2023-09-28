@@ -1,0 +1,43 @@
+{
+  "name": "walletconnect-extension",
+  "version": "1.0.3",
+  "description": "Tatum JS SDK extension - Wallet Connect provider",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exzender/walletconnect-tatum-extension.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist/"
+  ],
+  "main": "dist/main.js",
+  "types": "./dist/main.d.ts",
+  "scripts": {
+    "cli": "ts-node src/cli.ts",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx && prettier --write src/",
+    "clean": "rm -rf dist build package",
+    "ts-node": "ts-node",
+    "build": "node_modules/.bin/tsc -p tsconfig.json",
+    "pack": "npm pack",
+    "build-all": "yarn clean && yarn build"
+  },
+  "dependencies": {
+    "@walletconnect/modal": "^2.6.2",
+    "@walletconnect/sign-client": "^2.10.1"
+  },
+  "devDependencies": {
+    "@tatumio/tatum": "v4.0.3",
+    "@types/events": "^3.0.1",
+    "typescript": "^5.2.2"
+  },
+  "keywords": [
+    "Tatum",
+    "SDK",
+    "Blockchain",
+    "Extension"
+  ],
+  "author": "Exzender",
+  "license": "MIT"
+}

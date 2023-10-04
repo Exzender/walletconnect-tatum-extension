@@ -1,10 +1,6 @@
 import { BigNumber } from 'bignumber.js'
 import { EvmRpc, TatumConfig, TatumSdkWalletProvider, ITatumSdkContainer, TxPayload,
-     Constant, Utils, EVM_BASED_NETWORKS, Network } from '@tatumio/tatum'
-// NOTE: TatumConnector is not exported in @tatumio/tatum - getting it directly
-import { TatumConnector } from '@tatumio/tatum/dist/src/connector/tatum.connector'
-// NOTE: CreateFungibleToken is not exported in @tatumio/tatum - getting it directly
-import { CreateFungibleToken } from '@tatumio/tatum/dist/src/dto/walletProvider'
+     Constant, Utils, EVM_BASED_NETWORKS, Network, CreateFungibleToken, TatumConnector } from '@tatumio/tatum'
 
 import { EventEmitter } from 'events'
 import { WalletConnectModal } from '@walletconnect/modal'
